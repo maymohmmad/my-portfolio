@@ -1,0 +1,184 @@
+@import "tailwindcss";
+:root {
+
+
+
+     --color-void: #050813;
+  --color-abyss: #080D1F;
+  --color-surface: #0E1630;
+  --color-surface-2: #131C3D;
+  --color-line: rgba(148, 176, 255, 0.12);
+  --color-line-strong: rgba(148, 176, 255, 0.24);
+
+  --color-ink: #EAF0FF;
+  --color-ink-dim: #9FB0DA;
+  --color-ink-faint: #5D6B93;
+
+  --color-signal: #3D6BFF;
+  --color-signal-2: #6E8CFF;
+  --color-cyan: #5CE6FF;
+  --color-amber: #FFB454;
+
+  --font-display: "Space Grotesk", "Tajawal", sans-serif;
+  --font-body: "Inter", "Tajawal", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-arabic: "Tajawal", "Space Grotesk", sans-serif;
+
+   
+
+}
+@theme{  
+  /* ---- Color tokens: deep navy base + electric blue / cyan signal ---- */
+  --color-void: #050813;
+  --color-abyss: #080D1F;
+  --color-surface: #0E1630;
+  --color-surface-2: #131C3D;
+  --color-line: rgba(148, 176, 255, 0.12);
+  --color-line-strong: rgba(148, 176, 255, 0.24);
+
+  --color-ink: #EAF0FF;
+  --color-ink-dim: #9FB0DA;
+  --color-ink-faint: #5D6B93;
+
+  --color-signal: #3D6BFF;
+  --color-signal-2: #6E8CFF;
+  --color-cyan: #5CE6FF;
+  --color-amber: #FFB454;
+
+  --font-display: "Space Grotesk", "Tajawal", sans-serif;
+  --font-body: "Inter", "Tajawal", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-arabic: "Tajawal", "Space Grotesk", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background-color: var( --color-void);
+  color: #fff;
+   line-height: 1.6;
+  scroll-behavior: smooth;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+[dir="rtl"] body {
+  font-family: var(--font-arabic);
+}
+
+::selection {
+  background: var(--color-signal);
+  color: white;
+}
+
+
+/*
+
+اشرحلي الوان لشو كل لون
+🎨 شرح ألوان التصميم (Color Tokens)
+📌 الألوان الأساسية (Backgrounds)
+اللون	الكود	الاستخدام
+--color-void	#050813	الخلفية الرئيسية (أسود مزرق غامق جداً) - يستخدم كخلفية للصفحة
+--color-abyss	#080D1F	خلفية ثانوية (أغمق قليلاً من الـ void) - يستخدم للـ sections أو الـ cards
+--color-surface	#0E1630	خلفية العناصر (أزرق غامق) - يستخدم للـ containers أو الـ cards
+--color-surface-2	#131C3D	خلفية العناصر النشطة (أفتح قليلاً) - يستخدم للـ hover أو الـ active states
+📌 ألوان الخطوط والحدود (Lines & Borders)
+اللون	الكود	الاستخدام
+--color-line	rgba(148, 176, 255, 0.12)	حدود خفيفة (شفافة 12%) - يستخدم للفواصل والحدود غير الواضحة
+--color-line-strong	rgba(148, 176, 255, 0.24)	حدود واضحة (شفافة 24%) - يستخدم للحدود الأكثر وضوحاً مثل الزر النشط
+📌 ألوان النصوص (Text Colors)
+اللون	الكود	الاستخدام
+--color-ink	#EAF0FF	النص الرئيسي (أبيض مزرق فاتح) - يستخدم للعناوين والنصوص الأساسية
+--color-ink-dim	#9FB0DA	نص ثانوي (أزرق فاتح باهت) - يستخدم للنصوص الأقل أهمية أو الـ descriptions
+--color-ink-faint	#5D6B93	نص خافت (أزرق رمادي) - يستخدم للنصوص الصغيرة جداً أو الـ placeholders
+📌 ألوان الإشارات (Signal Colors)
+اللون	الكود	الاستخدام
+--color-signal	#3D6BFF	اللون الأساسي للإجراءات (أزرق كهربائي) - يستخدم للأزرار الرئيسية والروابط والـ CTAs
+--color-signal-2	#6E8CFF	حالة التمرير (أزرق أفتح) - يستخدم عند hover على الأزرار
+--color-cyan	#5CE6FF	لون مميز (سماوي/تركواز) - يستخدم للإشارات الخاصة أو الـ highlights
+--color-amber	#FFB454	لون تحذيري (برتقالي/ذهبي) - يستخدم للتنبيهات أو العناصر المميزة
+📌 أنواع الخطوط (Fonts)
+الخط	الاستخدام
+--font-display	"Space Grotesk" - للعناوين والهيدرات (خط حديث هندسي)
+--font-body	"Inter" - للنصوص الأساسية (خط واضح وسهل القراءة)
+--font-mono	"JetBrains Mono" - للكود والأرقام (خط متساوي الأحرف)
+--font-arabic	"Tajawal" - للنصوص العربية (خط يدعم اللغة العربية)
+🎯 كيف تستخدم الألوان في الكود؟
+
+خلفيات (Backgrounds) — من الأغمق للأفتح شوي
+css
+--color-void: #050813;
+
+أغمق لون بالنظام — خلفية الـ <body> نفسها، القاعدة يلي كل شي فوقها. تقريبًا أسود بس فيه ميل خفيف للأزرق (مش أسود صافي #000)، وهاد يلي بيعطي الإحساس "الأزرق الداكن" بدل "أسود عادي".
+
+css
+--color-abyss: #080D1F;
+
+خطوة وحدة أفتح من الـ void — بستخدمها للـ sections يلي بدي أفصلها بصريًا عن الخلفية الأساسية بدون ما أعمل قفزة لون كبيرة. مثلاً بصفحة About، قسم "التقنية" خلفيته bg-abyss بينما الأقسام الثانية bg-void، فبيصير في تناوب خفيف بين الأقسام وانتي عم تسكرولي — بيكسر الرتابة بدون ما يصير فيه تباين صارخ.
+
+css
+--color-surface: #0E1630;
+--color-surface-2: #131C3D;
+
+هدول لخلفيات الكروت (الأزرار المدورة، الفورم inputs، بطاقات المشاريع...) — أفتح من خلفية الصفحة عشان الكرت يبين إنه "طافي" فوق الخلفية. الفرق بينهم بسيط: surface للكرت نفسه، وsurface-2 لعناصر جوا الكرت (زي شريط عنوان التيرمينال، أو الـ pill يلي بيبين تحت الرابط الفعّال بالـ Navbar) — طبقة ثالثة فوق الكرت.
+
+الحدود (Borders)
+css
+--color-line: rgba(148, 176, 255, 0.12);
+--color-line-strong: rgba(148, 176, 255, 0.24);
+
+هدول مو ألوان صلبة — لاحظي rgba مع شفافية (0.12 و0.24). هاد مقصود: الحد بلون أزرق فاتح بس شفاف جدًا، فبيبين خط رفيع بالكاد محسوس على الخلفية الداكنة، مش خط أبيض صارخ. line للحالة العادية (حدود الكروت، الفواصل بين الأقسام)، وline-strong (شفافية أعلى = أوضح) للحالة النشطة أو الـ hover — زي حدود الرابط لما يكون isActive.
+
+النصوص (Text) — 3 درجات
+css
+--color-ink: #EAF0FF;
+--color-ink-dim: #9FB0DA;
+--color-ink-faint: #5D6B93;
+
+هاد أهم نظام بالملف كله، ومبني على مبدأ hierarchy بالتباين:
+
+ink (شبه أبيض بميل أزرق خفيف) — العناوين، النص الأساسي المهم، الكلام يلي بدك القارئ يوقف عنده
+ink-dim — النص الثانوي، الوصف تحت العنوان، الفقرات العادية
+ink-faint — أضعف درجة، للتفاصيل الهامشية (حقوق النشر بالفوتر، تسميات صغيرة، placeholder text)
+
+ليش هيك بدل ما نستخدم أبيض صافي بكل مكان؟ لأنه لو كل النصوص نفس اللون، ما رح يكون في تركيز بصري — عين القارئ ما بتعرف وين تبدأ. بتدرج الشفافية/السطوع، انتي فعليًا عم توجّهي نظر القارئ للأهم أول.
+
+ألوان التمييز (Accent / Signal Colors)
+css
+--color-signal: #3D6BFF;
+--color-signal-2: #6E8CFF;
+
+هاد اللون الأساسي للموقع — الأزرق الكهربائي. signal هو اللون الافتراضي (خلفية زر "تواصل معي"، الروابط المهمة)، وsignal-2 أفتح شوي، مستخدم بحالة الـ hover (لما تحطي الماوس عالزر بيصير أفتح شوية، وهاد بيعطي إحساس تفاعل بصري بسيط).
+
+css
+--color-cyan: #5CE6FF;
+
+لون تمييز ثانوي (accent) — أفتح وأزرق-سماوي أكتر من الـ signal. مستخدم بشكل مقصود وموفّر (مش بكل مكان) لأشياء بدها "تلمع" أكتر من العادي: النص المتحرك بالتيرمينال (> Ready to build...)، حرف "ع" لما اللغة العربية مفعّلة، أو الجزء المتدرّج من العناوين الكبيرة (bg-gradient-to-r from-signal-2 to-cyan).
+
+القاعدة الذهنية: signal = أزرار وأفعال (actions)، cyan = تمييز ولمعان (highlights). لو استخدمتي cyan بكل مكان بيفقد تأثيره، لأنه المفروض يكون نادر ولافت.
+
+css
+--color-amber: #FFB454;
+
+اللون الوحيد يلي مش أزرق بالنظام كله — كسرة لونية مقصودة (كل نظام تصميم بده نقطة كسر واحدة). مستخدم بمكان واحد بس: badge حالة "قيد التنفيذ" بصفحة Projects. ليش؟ لأنه لون تحذير/انتباه (زي إشارة صفراء)، وبيبيّن بوضوح وسط كل الأزرق إنه "هاد الشي لسا مو خلصان".
+
+خلاصة عملية — امتى تستخدمي شو
+الاستخدام	اللون
+خلفية الصفحة	bg-void
+خلفية section متناوب	bg-abyss
+خلفية كرت	bg-surface
+خلفية عنصر جوا كرت	bg-surface-2
+حد عادي	border-line
+حد بارز/active	border-line-strong
+عنوان رئيسي	text-ink
+نص عادي	text-ink-dim
+نص هامشي	text-ink-faint
+زر/رابط أساسي	bg-signal أو text-signal
+hover على زر أساسي	bg-signal-2
+تمييز/لمعان نادر	text-cyan
+حالة "لسا شغالين عليه"	text-amber
+
+بدك أشرحلك كمان ليش استخدمنا rgba/شفافية بدل ألوان صلبة بالحدود تحديدًا، أو نطلع لموضوع تاني؟
+*/
