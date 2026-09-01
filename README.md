@@ -8,9 +8,9 @@ The project consists of a **React frontend** and a **Laravel backend API**, with
 
 🚧 **Currently under development**
 
-* ✅ Frontend: Completed
-* 🚧 Backend: In Progress
-* 🔄 Frontend–Backend Integration: In Progress
+- ✅ Frontend: Completed
+- 🚧 Backend: In Progress
+- 🔄 Frontend–Backend Integration: In Progress
 
 ## ✨ Features
 
@@ -18,14 +18,14 @@ The project consists of a **React frontend** and a **Laravel backend API**, with
 
 The frontend is built with React and provides the user interface for the personal profile website.
 
-* Personal profile
-* About Me
-* Skills
-* Projects
-* Experience
-* Contact form
-* Responsive design
-* Modern user interface
+- Personal profile
+- About Me
+- Skills
+- Projects
+- Experience
+- Contact form
+- Responsive design
+- Modern user interface
 
 ### ⚙️ Backend
 
@@ -33,34 +33,34 @@ The backend is built with Laravel and provides API functionality for the fronten
 
 Current backend functionality includes:
 
-* Contact form API
-* Storing contact messages in the database
-* Project likes
-* Project comments
-* Project engagement functionality
-* Email notifications using Resend
-* API routes
-* CORS configuration
-* Request validation
+- Contact form API
+- Storing contact messages in the database
+- Project likes
+- Project comments
+- Project engagement functionality
+- Email notifications using Resend
+- API routes
+- CORS configuration
+- Request validation
 
 ## 🛠️ Technologies
 
 ### Frontend
 
-* React
-* TypeScript
-* HTML5
-* CSS3
-* JavaScript
+- React
+- TypeScript
+- HTML5
+- CSS3
+- JavaScript
 
 ### Backend
 
-* Laravel
-* PHP
-* MySQL
-* REST API
-* Resend
-* Composer
+- Laravel
+- PHP
+- MySQL
+- REST API
+- Resend
+- Composer
 
 ## 📁 Project Structure
 
@@ -97,10 +97,10 @@ personal-profile/
 
 The Laravel backend exposes API endpoints used by the frontend for dynamic functionality such as:
 
-* Contact messages
-* Project likes
-* Project comments
-* Project engagement
+- Contact messages
+- Project likes
+- Project comments
+- Project engagement
 
 ## 📧 Email
 
@@ -158,22 +158,22 @@ php artisan serve
 
 The backend requires environment configuration for:
 
-* Application URL
-* Frontend URL
-* MySQL database credentials
-* Resend API key
-* Mail configuration
+- Application URL
+- Frontend URL
+- MySQL database credentials
+- Resend API key
+- Mail configuration
 
 **Never upload your real `.env` file or API keys to GitHub.**
 
 ## 🚧 Future Improvements
 
-* Complete the backend development
-* Complete frontend–backend integration
-* Improve API functionality
-* Add additional database features
-* Improve validation and error handling
-* Deploy the complete full-stack application
+- Complete the backend development
+- Complete frontend–backend integration
+- Improve API functionality
+- Add additional database features
+- Improve validation and error handling
+- Deploy the complete full-stack application
 
 ## 🎯 Project Goal
 
@@ -183,6 +183,6 @@ The goal of this project is to build a professional personal profile website whi
 
 **Your Name**
 
-* GitHub: [YOUR_GITHUB_LINK](https://github.com/maymohmmad)
-* LinkedIn: www.linkedin.com/in/may-mohmmad-681287289
-* Email: mai.armilat@gmail.com
+- GitHub:https://github.com/maymohmmad
+- LinkedIn: www.linkedin.com/in/may-mohmmad-681287289
+- Email: mai.armilat@gmail.com
