@@ -43,9 +43,9 @@ const Home = () => {
             style={{ backgroundImage: `url(${heroImage})` }}
          >
 
-           <div className="absolute inset-0 grid-field opacity-40 pointer-events-none [mask-image:radial-gradient(ellipse_at_center,black,transparent_75%)]" />
-<div className="absolute -top-40 -end-40 h-[32rem] w-[32rem] rounded-full bg-signal/20 blur-[140px] pointer-events-none" />
-<div className="absolute -bottom-40 -start-20 h-[26rem] w-[26rem] rounded-full bg-cyan/10 blur-[130px] pointer-events-none" />
+            <div className="absolute inset-0 grid-field opacity-40 pointer-events-none [mask-image:radial-gradient(ellipse_at_center,black,transparent_75%)]" />
+            <div className="absolute -top-40 -end-40 h-[32rem] w-[32rem] rounded-full bg-signal/20 blur-[140px] pointer-events-none" />
+            <div className="absolute -bottom-40 -start-20 h-[26rem] w-[26rem] rounded-full bg-cyan/10 blur-[130px] pointer-events-none" />
 
             <div className='w-[60%] m-auto text-center relative z-10'>
                <Reveal>
@@ -56,14 +56,14 @@ const Home = () => {
                      {isArabic ? (
 
                         <> العادي لا يصنع أثرًا.<br />
-                           <span className="text-transparent bg-clip-text bg-gradient-to-r from-signal-2 to-cyan"> أنا أبحث عن الاستثنائي.</span></>
+                           <span className="text-transparent bg-clip-text bg-gradient-to-r from-signal-2 to-cyan transform-gpu" style={{ backfaceVisibility: 'hidden', isolation: 'isolate' }}> أنا أبحث عن الاستثنائي.</span></>
+                   ) : (
 
-                     ) : (
+   <> Ordinary doesn't<br />create impact.{" "}
+      <span className="text-transparent bg-clip-text bg-gradient-to-r from-signal-2 to-cyan transform-gpu"
+         style={{ backfaceVisibility: 'hidden', isolation: 'isolate' }}> I chase the extraordinary.</span></>
 
-                        <> Ordinary doesn't<br />create impact.{" "}
-                           <span className="text-transparent bg-clip-text bg-gradient-to-r from-signal-2 to-cyan"> I chase the extraordinary.</span></>
-
-                     )}</h1>
+)}</h1>
 
                   <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
                      <p className="mt-7 max-w-xl font-body text-ink-dim text-lg  leading-relaxed ">
@@ -73,7 +73,7 @@ const Home = () => {
                      </p>
 
                   </div>
-                  <div className="mt-10 flex flex-wrap items-center justify-center gap-4 z-100">
+                  <div className="relative z-20 mt-10 flex flex-wrap items-center justify-center gap-4">
 
 
                      <Link
@@ -86,12 +86,12 @@ const Home = () => {
                      </Link>
                      <Link
                         to="/contact"
-                        className="font-display font-semibold px-7 py-3.5 rounded-full border border-line-strong text-ink hover:bg-surface transition-colors"
+                        className="relative z-20 font-display font-semibold px-7 py-3.5 rounded-full border border-line-strong text-ink hover:bg-surface transition-colors"
                      >
                         {isArabic ? "لنصنع شيئًا مميزًا" : "Let's Build Something"}
                      </Link>
 
-                     
+
                   </div>
 
 
@@ -158,7 +158,7 @@ const Home = () => {
 
          {/* CTA STRIP */}
          <section className="relative border-t border-line overflow-hidden">
-            <div className="absolute inset-0 grid-field opacity-20" />
+            <div className="absolute inset-0 grid-field opacity-20 pointer-events-none" />
             <Reveal>
                <div className="relative mx-auto max-w-7xl px-5 md:px-8 py-20 text-center">
                   <p className="font-mono text-xs text-signal-2 mb-4">{isArabic ? "دعنا نتحدث الأن.." : "$ let's_talk --now"}</p>
