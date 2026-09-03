@@ -120,10 +120,10 @@ export default function Contact() {
 
 
 
-  return (
-    <div>
-      <div className="absolute left-190 -top-5 start-20 h-[26rem] w-[26rem] rounded-full bg-cyan/10 blur-[130px]" />
 
+  return (
+    <div className="relative overflow-x-hidden">
+      <div className="absolute -top-5 end-20 h-[26rem] w-[26rem] rounded-full bg-cyan/10 blur-[130px] pointer-events-none" />
 
       {/**hero Contact*/}
       <section className="relative overflow-hidden mt-50">
