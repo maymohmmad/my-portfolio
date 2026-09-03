@@ -38,8 +38,8 @@ class ContactController extends Controller
 
         // Sends the notification to your inbox (maymosa2002@gmail.com by
         // default — set MAIL_TO_ADDRESS in .env to change it).
-       // Mail::to(config('mail.to_address', 'maymosa2002@gmail.com'))
-        //    ->send(new ContactMail($contact));
+       Mail::to(config('mail.to_address'))
+    ->send(new ContactMail($contact));
 
         return response()->json([
             'message' => 'وصلت رسالتك بنجاح، شكرًا لتواصلك!',
