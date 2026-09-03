@@ -1,7 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import Reveal from './Reveal';
-import { Circle } from 'lucide-react';
 import { Brain, Lightbulb, Rocket, Code2, Server, BrainCircuit, Compass } from "lucide-react";
 
 import edrak from '../assets/edrak.png';
