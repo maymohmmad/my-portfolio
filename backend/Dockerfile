@@ -13,6 +13,10 @@ COPY . .
 
 RUN composer install --no-dev --optimize-autoloader --no-interaction
 
+# Ensure Laravel's cache/storage directories exist and are writable
+RUN mkdir -p storage/framework/views storage/framework/cache storage/framework/sessions storage/logs bootstrap/cache \
+    && chmod -R 775 storage bootstrap/cache
+
 EXPOSE 8080
 
 # Runs migrations then starts the server. Uses Render's $PORT automatically.
